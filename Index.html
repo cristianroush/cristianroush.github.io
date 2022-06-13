@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href='./CSS/normal.css' id="theme">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Source+Serif+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e9d4f2cec3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+
+        <nav class="nav" id="navbar">
+            <ul class="nav__list">
+                <li class="nav__items"><a class="nav__link" href="#welcome-section">Home</a></li>
+                <li class="nav__items"><a class="nav__link" href="#services">My Services</a></li>
+                <li class="nav__items"><a class="nav__link" href="#about">About My</a></li>
+                <li class="nav__items"><a class="nav__link" href="#projects">My work</a></li>
+                <li class="nav__items"><a class="nav__link" href="#contacto">Contact me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro" id="welcome-section">
+        <h1 class="section__title section__title--intro">
+            Hi, I am <strong>Cris J. Roush</strong> 
+            <p>Front-End  Dev</p>
+            <button onclick="switchSheet()" class="btn">Switch</button>
+        </h1>
+        <div class="section__subtitle section__subtitle--intro foo">
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a id="profile-link" target="_blank" href="https://www.facebook.com/cris.roush/" class="social-list__link">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a id="profile-link" target="_blank" href="https://www.instagram.com/crisroush/?hl=es" class="social-list__link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a target="_blank" href="#" class="social-list__link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li class="social-list__item" id="profile-link">
+                    <a id="profile-link" target="_blank" href="https://github.com/cristianroush" class="social-list__link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a target="_blank" href="#" class="social-list__link">
+                        <i class="fa-brands fa-figma"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a target="_blank" href="#" class="social-list__link">
+                        <i class="fa-brands fa-react"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <img src='./Img/profile.jpeg'class="intro__img">
+    </section>
+
+    <section class="my--services" id="services">
+        <h2 class="section__title section__title--services">
+            What I do
+        </h2>
+        <div class="services">
+            <div class="service">
+                <h3>Programming</h3>
+                <p>The mian area of my expertise is front and development. <br>
+                building small and medium web apps with React JS, <br>
+                custom plugins, features and animations...
+                <br>
+                I design and develop with the latest technologies and trends. 
+                My skills and knowledge are:<br>
+                - Web design [HTML (5), CSS (3), Responsive Web Design (RWD), Bootstrap, SASS]<br>
+                - Web development [React JS, JavaScript] <br>
+                - Design [Illustrator, Photoshop, Figma]</p>
+            </div>
+            <div class="service">
+                <h3>Video Editing</h3>
+                <p>Due to my curious nature, I create amazing videos. My skills include: <br>
+                    -Video Editing [Filmora X, DaVinchi resolve] <br>
+                    -Photo Editing [Adove Photoshop, Adobe ligthroom]</p>
+            </div>
+        </div>
+
+        <div class="skills">
+            <p class="section__title section__title--skils">My Skills</p>
+            <p>HTML</p>
+            <div class="progress">
+                <div class="progress__bar">
+                    <span class="progress__number">80%</span>
+                </div>
+            </div>
+            <p>CSS</p>
+            <div class="progress">
+                <div class="progress__bar">
+                    <span class="progress__number">70%</span>
+                </div>
+            </div>
+            <p>Java Script</p>
+            <div class="progress">
+                <div class="progress__bar">
+                    <span class="progress__number">50%</span>
+                </div>
+            </div>
+            <p>React JS</p>
+            <div class="progress">
+                <div class="progress__bar">
+                    <span class="progress__number">50%</span>
+                </div>
+            </div>
+            <p>Filmora X</p>
+            <div class="progress">
+                <div class="progress__bar">
+                    <span class="progress__number">80%</span>
+                </div>
+            </div>
+            <p>Adobe Photoshop</p>
+            <div class="progress">
+                <div class="progress__bar">
+                    <span class="progress__number">70%</span>
+                </div>
+            </div>
+            <p>Ligth Room</p>
+            <div class="progress">
+                <div class="progress__bar">
+                    <span class="progress__number">80%</span>
+                </div>
+            </div>
+
+        </div>
+        
+
+        <a href="#projects" class="btn">My Work</a>
+    </section>
+
+    <section class="about--me" id="about">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about">What I like </p>
+
+        <div class="about--me__body">
+            <p>Hi, I'm Cris Roush , a freelance and creative web designer and video editor based in <br> Costa Rica, but I work all over the world and have all the skills needed to create <br> a high quality website (app). My focus is on modern and responsive website solutions that <br> are easy to use and easy to update by the customer.</p>
+        </div>
+
+        <img src="./Img/Logo.jpg" alt="" class="about--me__img">
+    </section>
+
+    <section class="my--work" id="projects">
+        <h2 class="section__title section__title--work">My Work</h2>
+        <p class="section__subtitle section__subtitle--work">a selection of my work</p>
+
+        <div class="portfolio project-tile">
+            <a href="https://codepen.io/cristianroush/pen/xxPWVwg?editors=1000" class="portfolio__item">
+                <img class="portfolio__img" src="https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Portfolio img">
+            </a>
+
+            <a href="https://codepen.io/cristianroush/pen/LYeVBLv?editors=0100" class="portfolio__item">
+                <img class="portfolio__img" src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Portfolio img">
+            </a>
+
+            <a href="" class="portfolio__item">
+                <img class="portfolio__img" src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?cs=srgb&dl=pexels-negative-space-169573.jpg&fm=jpg" alt="Portfolio img">
+            </a>
+
+            <a href="" class="portfolio__item">
+                <img class="portfolio__img" src="https://images.pexels.com/photos/4218883/pexels-photo-4218883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Portfolio img">
+            </a>
+        </div>
+    </section>
+
+    <section class="contact--me" id="contacto">
+        <h1 class="section__title section__title--contact">Contact <span>Me</span></h1>
+        <div class="contact--me__budy animated bounceInUp">
+            <div class="contact--form">
+                <form action="">
+                    <p>
+                        <label>Full Name</label>
+                        <input type="text" name="fullname">
+                    </p>
+                    <p>
+                        <label>Email Adress</label>
+                        <input type="email" name="email">
+                    </p>
+                    <p>
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone">
+                    </p>
+                    <p>
+                        <label>Affair</label>
+                        <input type="text" name="affair">
+                    </p>
+                    <p class="block">
+                        <label>Message</label> 
+                        <textarea name="message" rows="3"></textarea>
+                    </p>
+                    <p class="block">
+                        <button class="btn">
+                            Send
+                        </button>
+                    </p>
+                </form>
+            </div>
+            <div class="contact--info">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62879.67874089334!2d-84.14836477462164!3d9.93562837648962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2zU2FuIEpvc8Op!5e0!3m2!1ses-419!2scr!4v1650238128740!5m2!1ses-419!2scr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i> San Jose Costa Rica
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <li>
+            <i class="fas fa-envelope-open-text"></i> crisjroush@gmail.com
+        </li>
+    </footer>
+
+    <script src="./JS/index.js"></script>
+</body> 
+</html>
