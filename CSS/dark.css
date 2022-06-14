@@ -246,6 +246,10 @@ body {
 }
 
 
+.ml13 .letter {
+    display: inline-block;
+}
+
 .social-list__link {
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
