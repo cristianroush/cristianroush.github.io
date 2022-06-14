@@ -241,19 +241,12 @@ body {
 }
 
 
-.foo {
-    color: var(--clr-accent);
-}
-
-.foo a {
-    color: var(--background-04);
-    text-decoration: none;
-}
-
 .social-list__link {
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
     margin: .5em;
+    color: var(--background-04);
+    text-decoration: none;
 }
 
 .social-list__link:hover {

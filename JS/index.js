@@ -31,9 +31,9 @@ navLinks.forEach(link => {
 function switchSheet() {
     let theme = document.getElementById("theme");
   
-    if (theme.getAttribute("href") == "./CSS/normal.css") {
-      theme.href = "./CSS/dark.css";
-    } else {
+    if (theme.getAttribute("href") == "./CSS/dark.css") {
       theme.href = "./CSS/normal.css";
+    } else {
+      theme.href = "./CSS/dark.css";
     }
 }
