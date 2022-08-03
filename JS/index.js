@@ -58,9 +58,9 @@ anime.timeline({loop: true})
     delay: (el, i) => 100 + 30 * i
   });
 
-  window.onload = function(){
-    var preloader = document.getElementById('loader');
-    setTimeout(() => {
-      preloader.classList.add('close');
-  },3000 );
-  }
+window.onload = function(){
+  var preloader = document.getElementById('loader');
+  setTimeout(() => {
+    preloader.classList.add('close');
+},3000 );
+}
