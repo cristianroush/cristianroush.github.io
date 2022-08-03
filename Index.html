@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href='./CSS/dark.css' id="theme">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./CSS/animations.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Source+Serif+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -29,12 +30,13 @@
             </ul>
         </nav>
     </header>
-
+        <div id="loader">
+        </div> 
     <section class="intro" id="welcome-section">
         <h1 class="section__title section__title--intro ">
             Hi, I am <strong class="ml13">Cris J. Roush</strong> 
             <p>Front-End Dev</p>
-            <button onclick="switchSheet()" class="btn">Switch color</button>
+            <button onclick="switchSheet()" class="btn" >Switch theme</button>
         </h1>
         <div class="section__subtitle section__subtitle--intro foo">
             <ul class="social-list">
@@ -70,7 +72,26 @@
                 </li>
             </ul>
         </div>
-        <img src='./Img/profile.jpeg'class="intro__img">
+        <img src='./Img/profile.jpeg'class="intro__img" alt="Cristian Roush">
+        <img src='./Img/profile-04.png'class="intro__img-01" alt="Cristian Roush">
+        <div class="graphic">
+            <div class="graphic-circles absolute">
+                <div class="circles">
+                    <div class="out-circle">
+                        <img class="davinci blend" src="./img/DaVinci Resolve.png" alt="">
+                        <img class="figma blend" src="./img/figma.png" alt="">
+                        <img class="filmora blend" src="./img/filmora.png" alt="">
+                        <img class="ligthroom blend" src="./img/Ligthroom.png" alt="">
+                    </div>
+                    <div class="in-circle">
+                        <img class="react blend" src="./img/react.png" alt="">
+                        <img class="js blend" src="./img/js.png" alt="">
+                        <img class="html blend" src="./img/html.png" alt="">
+                        <img class="css blend" src="./img/css-logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="my--services" id="services">
@@ -78,7 +99,7 @@
             What I do
         </h2>
         <div class="services">
-            <div class="service">
+            <div class="service card-01">
                 <h3>Programming</h3>
                 <p>The mian area of my expertise is Front end development. <br>
                 Building small and medium web apps with React JS, <br>
@@ -90,7 +111,7 @@
                 - Web development [React JS, JavaScript] <br>
                 - Design [Illustrator, Photoshop, Figma]</p>
             </div>
-            <div class="service">
+            <div class="service card-02">
                 <h3>Video Editing</h3>
                 <p>Due to my curious nature, I create amazing videos. My skills include: <br>
                     -Video Editing [Filmora X, DaVinchi resolve] <br>
@@ -142,7 +163,6 @@
                     <span class="progress__number">80%</span>
                 </div>
             </div>
-
         </div>
         
 
@@ -167,18 +187,39 @@
         <div class="portfolio project-tile">
             <a href="https://codepen.io/cristianroush/pen/xxPWVwg?editors=1000" class="portfolio__item">
                 <img class="portfolio__img" src="https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Portfolio img">
+                <div class="overlay">
+                    <div class="text">
+                        <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere excepturi voluptatibus natus cumque obcaecati aliquid, reprehenderit, beatae quo tempora voluptates odit id atque voluptatum quibusdam recusandae! Provident blanditiis enim hic. -->
+                        <!-- escribir sobre los proyectos aca-->
+                    </div>
+                </div>
             </a>
 
             <a href="https://codepen.io/cristianroush/pen/LYeVBLv?editors=0100" class="portfolio__item">
                 <img class="portfolio__img" src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Portfolio img">
+                <div class="overlay">
+                    <div class="text">
+                        <!-- escribir sobre los proyectos aca-->
+                    </div>
+                </div>
             </a>
 
             <a href="" class="portfolio__item">
                 <img class="portfolio__img" src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?cs=srgb&dl=pexels-negative-space-169573.jpg&fm=jpg" alt="Portfolio img">
+                <div class="overlay">
+                    <div class="text">
+                        <!-- escribir sobre los proyectos aca-->
+                    </div>
+                </div>
             </a>
 
             <a href="" class="portfolio__item">
                 <img class="portfolio__img" src="https://images.pexels.com/photos/4218883/pexels-photo-4218883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Portfolio img">
+                <div class="overlay">
+                    <div class="text">
+                        <!-- escribir sobre los proyectos aca-->
+                    </div>
+                </div>
             </a>
         </div>
     </section>

@@ -29,14 +29,15 @@ navLinks.forEach(link => {
 
 
 function switchSheet() {
-    let theme = document.getElementById("theme");
-  
-    if (theme.getAttribute("href") == "./CSS/dark.css") {
-      theme.href = "./CSS/normal.css";
-    } else {
-      theme.href = "./CSS/dark.css";
-    }
+  let theme = document.getElementById("theme");
+  if (theme.getAttribute("href") == "./CSS/dark.css") {
+    
+    theme.href = "./CSS/style.css";
+  } else {
+    theme.href = "./CSS/dark.css";
+  }
 }
+
 
 var textWrapper = document.querySelector('.ml13');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");

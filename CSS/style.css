@@ -16,13 +16,14 @@
 
     /* normal */
 
-    --background-01: #014040;
-    --background-02: #02735E;
-    --background-03: #03A678;
-    --background-04: #F27405;
-    --background-05: #731702;
+    --background-01: #000000;
+    --background-02: #4A087D;
+    --background-03: #8606EA;
+    --background-04: #7DF1F0;
+    --background-05: #ffffff;
     --background-06: #ffffff;
     --background-07: #000000;
+    --background-08:  radial-gradient(79.43% 251.58% at 23.18% 73.07%,#0142a0 0,#0f133a 44.41%,#101034 56.43%,#141034 69.58%,#301436 100%,#411958 0);
     
     
 
@@ -63,6 +64,7 @@ strong {
 
 section  {
     padding: 5em 2em;
+    background: var(--background-08);
 }
 
 img {
@@ -70,8 +72,12 @@ img {
     display: block;
 }
 
-body {
-    background-color: var(--background-01);
+body,
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: var(--background-08);
 }
 
 /* bottons */
@@ -94,117 +100,20 @@ body {
     transform: scale(1.1);
 }
 
-/* nav */
-
-.nav {
-    position: fixed;
-    background-color: var(--background-04);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-
-    transform: translateX(100%);
-    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-}
-
-.nav__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.nav__link {
-    display: inline-block;
-    padding: .5em 2.5em;
-    color: var(--background-01);
-    text-decoration: none;
-    cursor: pointer;
-    font-size: var(--fs-h3);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: var(--ff-secudary);
-    font-weight: var(--fw-bold);
-    transition: transform 250ms ease-in-out;
-}
-
-.nav__link:hover {
-    background-color: rgba(255, 255, 255, 0.116);
-    border-radius: 1rem;
-    transform: scale(1.2);
-}
-
-.nav-toggle {
-    margin-top: 2rem;
-    padding: .25em;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    z-index: 1000;
-    position: fixed;
-    right: 1em;
-    top: 1em;
-}
-
-.nav-open .nav{
-    transform: translateX(0%);
-}
-
-.nav-open .nav-toggle{
-    position: fixed;
-}
-
-.nav-open .hamburger {
-    transform: rotate(.625turn);
-    background-color: var(--background-01);
-}
-
-.nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
-    background-color: var(--background-01);
-}
-.nav-open .hamburger::after {
-    opacity: 0;
-}
-
-.hamburger {
-    display: block;
-    position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    background: var(--background-04);
-    width: 2em;
-    height: 3px;
-    border-radius:1em;
-    transition: transform 250ms ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-.hamburger::before {top: 6px;}
-.hamburger::after { bottom: 6px;}
-
+/* cambio de color */
 
 /* intro */
 
 .intro {
     position: relative;
     width: auto;
+    grid-template-columns: min-content;
+}
+
+.overlay,
+.text,
+.intro__img-01 {
+    display: none;
 }
 
 .section__title{
@@ -231,15 +140,12 @@ body {
 .section__subtitle--intro,
 .section__subtitle--about,
 .section__subtitle--work {
-    background-color: var(--background-03);
-    border: solid 1px var(--background-05);
     color: var(--clr-accent);
     font-family: var(--ff-secundary);
     font-weight: var(--fw-bold);
     padding: .25em 1em;
     margin-bottom: 1em;
 }
-
 
 .social-list__link {
     font-size: var(--fs-h3);
@@ -270,24 +176,28 @@ body {
             "img tilte"
             "img subtitle";
         grid-template-columns: min-content;
+        background-image: url("../Img/profile-04.png");
+        background-size: contain;
+        background-blend-mode: color;
+        background-repeat: no-repeat;
+        background-position: 10% ;
     }
 
-    .intro__img {
-        grid-area: img;
-        min-width: 350px;
-        position: relative;
-        z-index: 2;
-        border-radius: 1em;
+    .section__title--intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: red; */
     }
 
     .section__subtitle--intro {
         align-self: center;
-        grid-column: -1 / 1;
-        grid-row: 2;
-        position: relative;
-        align-items: right;
-        left: -1.5em;
-        width: calc(100% + 1.5em);
+        background-color: transparent;
+        border: none;
+    }
+
+    .intro__img {
+        display: none;
     }
 }
 
@@ -322,46 +232,6 @@ body {
     color: var(--background-06);
 }
 
-.skills {
-    width: 100%;
-    padding: 40px;
-    background-color: transparent;
-    border-radius: 1rem;
-    margin-bottom: 4rem;
-    text-align: left;
-}
-
-.section__title--skils {
-    text-align: center;
-    color: var(--background-04);
-}
-
-.skills p {
-    color: var(--background-06);
-}
-
-.progress {
-    width: 100%;
-    height: 2px;
-    margin: 18px 0px;
-}
-
-.progress__bar {
-    background: var(--background-03);
-    width: 0%;
-    height: 100%;
-    position: relative;
-    transition: all 1.5s;
-    animation: animateColor 5s linear infinite;
-}
-
-.progress__number {
-    color: var(--background-06);
-    position: absolute;
-    top: 5px;
-    right: 0;
-}
-
 @media (min-width: 800px) {
     .services {
         display: flex;
@@ -372,25 +242,6 @@ body {
 
     .service + .service {
         margin-left: 2em;
-    }
-
-    .skills {
-        margin: auto;
-        width: 50%;
-        padding: 40px;
-        border-radius: 1rem;
-    }
-/* trabajar esta parte y mejorarla */
-
-}
-
-@keyframes animateColor {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-
-    100% {
-        filter: hue-rotate(360deg);
     }
 }
 
@@ -441,6 +292,7 @@ body {
     }
 }
 
+/* work */
 .my--work {
     background-image: url(https://images.pexels.com/photos/2749481/pexels-photo-2749481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-size: cover;
@@ -472,7 +324,6 @@ body {
     transform: scale(1.2);
     opacity: .75;
 }
-
 /* contat me */
 
 .contact--me__budy {
@@ -565,6 +416,7 @@ ul {
     }
 }
 
+
 .map{
     overflow:hidden;
     padding-bottom:90.25%;
@@ -582,4 +434,3 @@ ul {
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
 }
-

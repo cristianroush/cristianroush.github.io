@@ -1,0 +1,306 @@
+/* nav */
+
+.nav {
+    position: fixed;
+    background-color: var(--background-04);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    display: inline-block;
+    padding: .5em 2.5em;
+    color: var(--background-01);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: var(--fs-h3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--ff-secudary);
+    font-weight: var(--fw-bold);
+    transition: transform 250ms ease-in-out;
+}
+
+.nav__link:hover {
+    background-color: rgba(255, 255, 255, 0.116);
+    border-radius: 1rem;
+    transform: scale(1.2);
+}
+
+.nav-toggle {
+    margin-top: 2rem;
+    padding: .25em;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 1000;
+    position: fixed;
+    right: 5em;
+    top: 1em;
+}
+
+.nav-open .nav{
+    transform: translateX(0%);
+}
+
+.nav-open .nav-toggle{
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+    background-color: var(--background-01);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+    background-color: var(--background-01);
+}
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--background-04);
+    width: 2em;
+    height: 3px;
+    border-radius:1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before {top: 6px;}
+.hamburger::after { bottom: 6px;}
+
+
+
+/*circle animation  */
+
+@media (min-width: 800px) {
+    .graphic{
+        /* background-color: red; */
+        grid-area: img;
+        min-width: 350px;
+        position: relative;
+        z-index: 2;
+        border-radius: 1em;
+    }
+
+    .circles {
+        /* background-color: blue; */
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+    }
+
+    .blend {
+        height: 50px;
+        position: absolute;
+
+    }
+
+    .out-circle {
+        /* background-color: rgba(255, 0, 0, 0.268); */
+        border-radius: 0%;
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        animation: turn1 25s linear infinite;
+    }
+
+    .in-circle {
+        /* background-color: rgba(21, 0, 255, 0.268); */
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        animation: turn2 25s linear infinite;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+    .graphic {
+        display: none;
+    }
+}
+
+.react,
+.davinci {
+    top: 0%;
+}
+
+
+.figma {
+    top: 0%;
+    left: 80%;
+}
+
+.js {
+    top: 0;
+    left: 70%;
+}
+
+.html {
+    top: 70%;
+    left: 70%;
+}
+
+.filmora {
+    top: 80%;
+    left: 80%;
+}
+
+.css {
+    top: 70%;
+}
+
+.ligthroom {
+    top: 80%;
+    left: 0%;
+}
+
+.js {
+    border-radius: 45%;
+}
+
+.html,
+.css,
+.react,
+.js {
+    animation: turn1 25s linear infinite;
+}
+
+.filmora,
+.davinci,
+.figma,
+.ligthroom {
+    animation: turn2 25s linear infinite;
+}
+
+@keyframes turn1 {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes turn2 {
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+/* services amination */
+
+.skills {
+    width: 100%;
+    padding: 40px;
+    background-color: transparent;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.section__title--skils {
+    text-align: center;
+    color: var(--background-04);
+}
+
+.skills p {
+    color: var(--background-06);
+}
+
+.progress {
+    width: 100%;
+    height: 2px;
+    margin: 18px 0px;
+}
+
+.progress__bar {
+    background-color: var(--background-03);
+    width: 0%;
+    height: 100%;
+    position: relative;
+    transition: all 1.5s;
+    animation: animateColor 5s linear infinite;
+}
+
+.progress__number {
+    color: var(--background-06);
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+@media (min-width: 800px) {
+    .skills {
+        margin: auto;
+        width: 50%;
+        padding: 40px;
+        border-radius: 1rem;
+    }
+/* trabajar esta parte y mejorarla */
+
+}
+
+@keyframes animateColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* pre loader */
+
+#loader {
+    position: fixed;
+    background-color: var(--background-04);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.close {
+    transform: translateX(100%);
+    transition: transform 1s cubic-bezier(.5, 0, .5, 1);
+}
