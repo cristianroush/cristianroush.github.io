@@ -27,7 +27,6 @@ navLinks.forEach(link => {
     })
 });
 
-
 function switchSheet() {
   let theme = document.getElementById("theme");
   if (theme.getAttribute("href") == "./CSS/dark.css") {
@@ -37,7 +36,6 @@ function switchSheet() {
     theme.href = "./CSS/dark.css";
   }
 }
-
 
 var textWrapper = document.querySelector('.ml13');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -59,3 +57,10 @@ anime.timeline({loop: true})
     duration: 1200,
     delay: (el, i) => 100 + 30 * i
   });
+
+  window.onload = function(){
+    var preloader = document.getElementById('loader');
+    setTimeout(() => {
+      preloader.classList.add('close');
+  },3000 );
+  }
