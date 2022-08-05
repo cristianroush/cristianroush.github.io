@@ -51,7 +51,7 @@
     cursor: pointer;
     z-index: 1000;
     position: fixed;
-    right: 5em;
+    right: 2em;
     top: 1em;
 }
 
@@ -103,7 +103,6 @@
 .hamburger::after { bottom: 6px;}
 
 
-
 /*circle animation  */
 
 @media (min-width: 800px) {
@@ -114,6 +113,8 @@
         position: relative;
         z-index: 2;
         border-radius: 1em;
+        left: 230%;
+        top: -14%;
     }
 
     .circles {
@@ -125,7 +126,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        left: 50%;
+        /* left: 50%; */
     }
 
     .blend {
@@ -150,7 +151,9 @@
         width: 150px;
         animation: turn2 25s linear infinite;
     }
-
+    .nav-toggle {
+        right: 5em;
+    }
 
 }
 
@@ -304,3 +307,6 @@
     transform: translateX(100%);
     transition: transform 1s cubic-bezier(.5, 0, .5, 1);
 }
+
+/* loading */
+
