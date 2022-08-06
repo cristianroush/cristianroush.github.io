@@ -113,20 +113,20 @@
         position: relative;
         z-index: 2;
         border-radius: 1em;
-        left: 40%;
+        left: 100%;
         top: -14%;
     }
 
     .circles {
         /* background-color: blue; */
-        width: 500px;
+        width: 400px;
         height: 500px;
         border-radius: 50%;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        /* left: 50%; */
+        left: 65%;
     }
 
     .blend {
