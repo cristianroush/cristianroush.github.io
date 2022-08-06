@@ -184,7 +184,7 @@ html{
         background-size: cover;
         background-blend-mode: color;
         background-repeat: no-repeat;
-        /* background-position: 10% ; */
+        background-position: 10% ;
     }
 
     .section__title--intro {
@@ -193,7 +193,7 @@ html{
         flex-direction: column;
         align-items:center;
         /* background-color: red; */
-        right: 50%;
+        right: 40%;
         top: 50%;
     }
 
