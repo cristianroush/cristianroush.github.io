@@ -17,15 +17,11 @@
 
     /* normal */
 
-    /* --background-01: #000000; */
-    /* --background-02: #4A087D; */
-    /* --background-03: #8606EA; */
-    --background-04: #7DF1F0;
-    /* --background-05: #ffffff; */
+
     --background-01: #141E26;
     --background-02: #213140;
     --background-03: #C5D3D9;
-    /* --background-04: #27735D; */
+    --background-04: #0eea62;
     --background-05: #F2A172;
     --background-06: #ffffff;
     --background-07: #000000;
@@ -79,8 +75,6 @@ img {
 body,
 html{
     margin: 0;
-    height: 100%;
-    width: 100%;
     background: radial-gradient(79.43% 251.58% at 23.18% 73.07%,#000000 0,#060606 44.41%,#232323 56.43%,#323232 69.58%,#616161 100%,#616161 0);
 }
 
@@ -116,7 +110,7 @@ html{
 
 .overlay,
 .text,
-.intro__img-01 {
+.intro__img {
     display: none;
 }
 
@@ -178,46 +172,45 @@ html{
         grid-column-gap: 1em;
         grid-template-areas: 
             "img tilte"
-            "img subtitle";
+            "img subtitle"
+            "img graphic";
         grid-template-columns: min-content;
-        background-image: url("../Img/profile-04.png");
+        background-image: url("../Img/profile-06.png");
         background-size: cover;
-        background-blend-mode: color;
+        background-blend-mode: multiply;
         background-repeat: no-repeat;
-        background-position: 10% ;
+        background-position: 1% ;
     }
 
     .section__title--intro {
         display: flex;
-        position: relative;
         flex-direction: column;
-        align-items:center;
-        /* background-color: red; */
-        right: 55%;
-        top: 50%;
+        align-items: center;
+        position: relative;
+        top: 20%;
     }
 
     .section__subtitle--intro {
         align-self: center;
+        grid-row: 3;
         background-color: transparent;
         border: none;
-        position: absolute;
-        left: 22%;
-        /* background-color: red; */
+        position: relative;
     }
-
+    .intro__img-01,
     .intro__img {
         display: none;
     }
+
+
 }
 
 /* services */
 
 .my--services {
-    /* background-image: url(https://images.pexels.com/photos/355943/pexels-photo-355943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); */
-    background-image: url('/Img/background.jpg');
+    background-image: url(https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
-    background-color: #03a67856;
+    background-color: #00f8b239;
     background-blend-mode: multiply;
     text-align: center;
     color: var(--background-03);
@@ -241,7 +234,7 @@ html{
     max-width: 500px;
     margin: 0 auto;
     color: var(--background-06);
-    border: solid red;
+    /* border: solid red; */
     margin-top: 2rem;
 }
 
@@ -260,13 +253,18 @@ html{
 
 /* about section */
 
-/* .about--me {
+.about--me {
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .about--me__body{
     color: var(--background-06);
+}
+
+.section__subtitle--about{
+    border: solid 1px var(--background-04);
+    color: var(--background-04);
 }
 
 @media (min-width: 800px) {
@@ -279,8 +277,8 @@ html{
             'text img';
         grid-column-gap: 2em;
     }
-
-    .section__subtitle--about {
+    
+    .section__title--about {
         grid-area: title;
     }
 
@@ -288,24 +286,25 @@ html{
         grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
-        left: -2em;
-        width: calc(100% + 2rem);
-        padding-left: 1em;
-        padding-right: calc(200px + 2em);
+        left: -1em;
+        width: calc(100% + 3em); 
+        padding-left: 2em;
+        padding-right: calc(200px + 4em);
+        padding-top: 20px;
     }
 
     .about--me__img {
         grid-area: img;
         position: relative;
         right: 8em;
-        top: 10em;
         min-width: 400px;
-        height: 200px;
+        height: 450px;
         z-index: 20;
     }
-} */
+}
 
 /* work */
+
 .my--work {
     background-image: url(https://images.pexels.com/photos/2749481/pexels-photo-2749481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-size: cover;
@@ -337,6 +336,8 @@ html{
     transform: scale(1.2);
     opacity: .75;
 }
+
+
 /* contat me */
 
 .contact--me__budy {
@@ -400,8 +401,8 @@ ul {
     border-bottom: 1px solid var(--background-04);
 }
 
-
 /* CONTACT INFO */
+
 .contact--info {
     background: var(--background-04);
 }
@@ -414,6 +415,7 @@ ul {
 }
 
 /* LARGE SIZE */
+
 @media(min-width: 700px) {
     .contact--me__budy {
         display: grid;

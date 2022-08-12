@@ -283,6 +283,7 @@ body {
 }
 
 /* work */
+
 .my--work {
     background-image: url(https://images.pexels.com/photos/2749481/pexels-photo-2749481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-size: cover;
@@ -314,6 +315,7 @@ body {
     transform: scale(1.2);
     opacity: .75;
 }
+
 /* contat me */
 
 .contact--me__budy {
