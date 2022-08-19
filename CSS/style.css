@@ -83,7 +83,7 @@ html{
 .btn {
     display: inline-block;
     padding: .5em 2.5em;
-    background-color: var(--background-02);
+    background-color: var(--background-01);
     color: var(--background-04);
     text-decoration: none;
     cursor: pointer;
@@ -98,8 +98,6 @@ html{
     transform: scale(1.1);
 }
 
-/* cambio de color */
-
 /* intro */
 
 .intro {
@@ -109,8 +107,7 @@ html{
 }
 
 .overlay,
-.text,
-.intro__img {
+.text{
     display: none;
 }
 
@@ -175,7 +172,7 @@ html{
             "img subtitle"
             "img graphic";
         grid-template-columns: min-content;
-        background-image: url("../Img/profile-06.png");
+        background-image: url("../Img/profile-03.png");
         background-size: cover;
         background-blend-mode: multiply;
         background-repeat: no-repeat;
@@ -197,23 +194,20 @@ html{
         border: none;
         position: relative;
     }
-    .intro__img-01,
-    .intro__img {
+    .intro__img-01 {
         display: none;
     }
-
-
 }
 
 /* services */
 
 .my--services {
-    background-image: url(https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
-    background-color: #00f8b239;
-    background-blend-mode: multiply;
-    text-align: center;
+    background-color: #05198c61;
+    background-blend-mode: color;
     color: var(--background-03);
+    text-align: center;
 }
 
 .section__title--services {
@@ -221,35 +215,39 @@ html{
     position: relative;
 }
 
-.section__title--services::after {
-    content: '';
-    display: block;
-    width: 3em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background-color: var(--background-04);
-}
-
 .service {
     max-width: 500px;
-    margin: 0 auto;
     color: var(--background-06);
-    /* border: solid red; */
-    margin-top: 2rem;
+    padding: 0%;
+}
+
+.service h3 {
+    color: var(--background-04);
 }
 
 @media (min-width: 800px) {
     .services {
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 50%; 
+    padding: 0 40px;
+    margin-bottom: 4em;
     }
 
-    .service + .service {
-        margin-left: 2em;
+    .my--services {
+    text-align: left;
     }
-}
+
+    .section__title--services::after {
+        content: '';
+        display: block;
+        width: 3em;
+        height: 1px;
+        margin: 0.5em 50px 1em;
+        background-color: var(--background-04);
+    }
+} 
 
 /* about section */
 
@@ -290,15 +288,14 @@ html{
         width: calc(100% + 3em); 
         padding-left: 2em;
         padding-right: calc(200px + 4em);
-        padding-top: 20px;
     }
 
     .about--me__img {
         grid-area: img;
         position: relative;
-        right: 8em;
-        min-width: 400px;
-        height: 450px;
+        right: 6em;
+        min-width: 300px;
+        height: 350px;
         z-index: 20;
     }
 }
@@ -306,13 +303,14 @@ html{
 /* work */
 
 .my--work {
-    background-image: url(https://images.pexels.com/photos/2749481/pexels-photo-2749481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-image: url(https://images.pexels.com/photos/698808/pexels-photo-698808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
     background-color: #73170228;
     background-blend-mode: multiply;
     text-align: center;
 }
 
+.section__subtitle--work,
 .section__title--work {
     color: var(--background-04);
 }
@@ -442,7 +440,7 @@ ul {
 .footer {
     width: 100%;
     height: 100px;
-    background: var(--background-04);
+    background-color: var(--background-04);
     text-align: center;
     padding: 4rem;
     list-style: none;

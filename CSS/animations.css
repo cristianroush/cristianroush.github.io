@@ -225,21 +225,19 @@
 /* services amination */
 
 .skills {
+    text-align: left;
     width: 100%;
-    padding: 40px;
+    padding: 0 40px ;
     background-color: transparent;
     border-radius: 1rem;
     margin-bottom: 4rem;
-    text-align: left;
+
 }
 
 .section__title--skils {
     text-align: center;
     color: var(--background-04);
-}
-
-.skills p {
-    color: var(--background-06);
+    margin: 0 0 10%;
 }
 
 .progress {
@@ -249,7 +247,7 @@
 }
 
 .progress__bar {
-    background-color: var(--background-03);
+    background-color: violet;
     width: 0%;
     height: 100%;
     position: relative;
@@ -266,10 +264,21 @@
 
 @media (min-width: 800px) {
     .skills {
-        margin: auto;
         width: 50%;
-        padding: 40px;
-        border-radius: 1rem;
+        margin: 70px 45% 0;
+        top: 100%;
+        position: absolute;
+    }
+
+
+
+    .section__title--skils::after {
+        content: '';
+        display: block;
+        width: 3em;
+        height: 1px;
+        margin: 0.5em auto 1em;
+        background-color: var(--background-04);
     }
 /* trabajar esta parte y mejorarla */
 
@@ -280,7 +289,7 @@
         filter: hue-rotate(0deg);
     }
 
-    100% {
+    50% {
         filter: hue-rotate(360deg);
     }
 }
@@ -290,11 +299,12 @@
 #loader {
     position: fixed;
     background-color: var(--background-04);
+    background-image: url(https://images.pexels.com/photos/2603464/pexels-photo-2603464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .close {
@@ -303,4 +313,3 @@
 }
 
 /* loading */
-

@@ -1,3 +1,5 @@
+// permite que las lineas de progreso (progress__bar) se reinicien cada que la pagina se recargue
+
 window.addEventListener('load', () => {
     let progressBars = document.querySelectorAll(".progress__bar");
     let values = [
@@ -14,6 +16,8 @@ window.addEventListener('load', () => {
     });
 });
 
+// permite que el boton (nav-toggle) su funcionamiento para llamar y remover el menu 
+
 const navToggle = document.querySelector ('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link')
 
@@ -27,15 +31,7 @@ navLinks.forEach(link => {
     })
 });
 
-function switchSheet() {
-  let theme = document.getElementById("theme");
-  if (theme.getAttribute("href") == "./CSS/dark.css") {
-    
-    theme.href = "./CSS/style.css";
-  } else {
-    theme.href = "./CSS/dark.css";
-  }
-}
+// hace que el texto tenga una animacion 
 
 var textWrapper = document.querySelector('.ml13');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -56,7 +52,10 @@ anime.timeline({loop: true})
     easing: "easeInExpo",
     duration: 1200,
     delay: (el, i) => 100 + 30 * i
-  });
+  }
+);
+
+//funcion de preloader
 
 window.onload = function(){
   var preloader = document.getElementById('loader');
