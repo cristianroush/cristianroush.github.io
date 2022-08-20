@@ -129,8 +129,9 @@
         height: 50px;
         width: 50px;
         position: absolute;
-        background-color: red;
-
+        background-size: cover;
+        border: solid 1px var(--background-04);
+        border-radius: 50%;
     }
 
     .out-circle {
@@ -159,44 +160,52 @@
     }
 }
 
-.react,
+.react {
+    background-image: url("../Img/react.png");
+    
+}
 .davinci {
     top: 0%;
+    background-image: url("../Img/DaVinci\ Resolve.png");
 }
 
 
 .figma {
     top: 0%;
     left: 80%;
+    background-image: url("../Img/figma.png");
 }
 
 .js {
     top: 0;
     left: 70%;
+    background-image: url("../Img/js.png");
 }
 
 .html {
     top: 70%;
     left: 70%;
+    background-image: url("../Img/html.png");
 }
 
 .filmora {
     top: 80%;
     left: 80%;
+    background-image: url("../Img/filmora.png");
 }
 
 .css {
     top: 70%;
+    background-image: url("../Img/css-logo.png");
 }
 
 .ligthroom {
     top: 80%;
     left: 0%;
+    background-image: url("../Img/Ligthroom.png");
+    
 }
 
-.js {
-    border-radius: 45%;
-}
 
 .html,
 .css,
