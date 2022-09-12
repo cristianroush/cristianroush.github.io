@@ -25,7 +25,6 @@
     --background-05: #F2A172;
     --background-06: #ffffff;
     --background-07: #000000;
-    --background-08:  radial-gradient(79.43% 251.58% at 23.18% 73.07%,#0142a0 0,#0f133a 44.41%,#101034 56.43%,#141034 69.58%,#301436 100%,#411958 0);
 
     --fs-h1: 3rem;
     --fs-h2: 2.5rem;
@@ -202,10 +201,10 @@ html{
 /* services */
 
 .my--services {
-    background-image: url(https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover;
-    background-color: #05198c61;
-    background-blend-mode: color;
+    background-image: url(https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover; 
+    background-blend-mode: multiply;   
+    background-color: #05198cbe;
     color: var(--background-03);
     text-align: center;
 }
@@ -225,18 +224,21 @@ html{
     color: var(--background-04);
 }
 
+.card-01 h3 {
+    margin-bottom: 3.5rem;
+}
+
 @media (min-width: 800px) {
+
     .services {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    max-width: 50%; 
-    padding: 0 40px;
-    margin-bottom: 4em;
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .my--services {
-    text-align: left;
+    .service + .service {
+        margin-left: 2em;
     }
 
     .section__title--services::after {
@@ -244,8 +246,18 @@ html{
         display: block;
         width: 3em;
         height: 1px;
-        margin: 0.5em 50px 1em;
+        margin: 0.5em auto 1em;
         background-color: var(--background-04);
+        animation: animateColor 5s linear infinite;
+    }
+
+    .service + .servicess {
+        margin-left: 2em;
+    }
+
+    .card-02 {
+        width: 100%;
+        margin-bottom: 4rem;
     }
 } 
 
@@ -263,6 +275,10 @@ html{
 .section__subtitle--about{
     border: solid 1px var(--background-04);
     color: var(--background-04);
+}
+
+.about--me__img {
+    box-shadow: 0.25em 0.25em 0.75em #000000;
 }
 
 @media (min-width: 800px) {
