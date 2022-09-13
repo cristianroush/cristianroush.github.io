@@ -201,9 +201,8 @@ html{
 /* services */
 
 .my--services {
-    background-image: url(https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover; 
-    background-blend-mode: multiply;   
+    background-image: url( https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;   
     background-color: #05198cbe;
     color: var(--background-03);
     text-align: center;
